@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- RESET & GLOBAL VARIABLES --- */
+    
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +34,7 @@
             line-height: 1.5;
         }
 
-        /* --- NAVBAR --- */
+        
         nav {
             position: fixed;
             top: 0;
@@ -68,7 +68,7 @@
             text-transform: uppercase;
         }
 
-        /* --- FEATURED HERO SECTION --- */
+        
         .hero-banner {
             position: relative;
             height: 70vh;
@@ -159,7 +159,7 @@
             background-color: rgba(255, 255, 255, 0.75);
         }
 
-        /* --- CAST / MEMBER SECTION --- */
+        
         .main-container {
             padding: 0 5% 60px;
             margin-top: -20px;
@@ -201,7 +201,7 @@
         .poster-img-wrapper {
             position: relative;
             width: 100%;
-            padding-top: 130%; /* Aspect ratio 3:4 */
+            padding-top: 130%; 
         }
 
         .poster-img {
@@ -236,7 +236,7 @@
             font-weight: 600;
         }
 
-        /* --- STREAMING-STYLE PREVIEW MODAL --- */
+       
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -391,6 +391,49 @@
             .cast-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
             .modal-banner { height: 160px; }
         }
+
+        /* --- FLOATING CRITIC & SUGGESTION BUTTON --- */
+.cs-float-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); /* Warna gradasi ala Instagram */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.cs-float-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.4);
+}
+
+.cs-float-btn i {
+    font-size: 1.3rem;
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 600px) {
+    .cs-float-btn span {
+        display: none; /* Sembunyikan teks di HP, hanya tampilkan ikon */
+    }
+    .cs-float-btn {
+        padding: 14px;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 20px;
+    }
+}
     </style>
 </head>
 <body>
@@ -414,7 +457,7 @@
                 <span>7 Anggota Kelompok</span>
                 <span>HD / 4K</span>
             </div>
-            <p class="hero-desc">Selamat datang di PortoFlix! Platform interaktif untuk menjelajahi profil, peran teknis, serta keahlian dari setiap anggota Kelompok 3.</p>
+            <p class="hero-desc">Selamat datang di PortoFlix! Platform interaktif untuk menjelajahi profil serta Hobby dari setiap anggota Kelompok 3.</p>
             <div class="hero-btns">
                 <button class="btn-play" onclick="scrollToCast()">
                     <i class="fa-solid fa-play"></i> Lihat Anggota
@@ -467,6 +510,13 @@
     <footer>
         <p>&copy; 2026 PortoFlix - Kelompok 3. All rights reserved.</p>
     </footer>
+
+    <!-- Tombol Floating Kritik & Saran (Instagram) -->
+<!-- Ganti USERNAME_INSTAGRAM dengan username IG kamu/kelompok -->
+<a href="https://instagram.com/PAN._.NS" target="_blank" class="cs-float-btn">
+    <i class="fa-brands fa-instagram"></i>
+    <span>Kritik & Saran</span>
+</a>
 
     <!-- JavaScript Logic -->
     <script>
