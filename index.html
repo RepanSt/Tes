@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortoFlix - Portofolio Kelompok 3</title>
-    <!-- Google Fonts & Font Awesome Icons -->
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -74,7 +74,7 @@
             height: 70vh;
             min-height: 450px;
             background: linear-gradient(180deg, rgba(20,20,20,0.5) 0%, rgba(20,20,20,1) 100%),
-                        url('https://images.unsplash.com/photo-1785390589212-f306f5272697?w=1200&auto=format&fit=crop&q=80') center/cover no-repeat;
+                        url('https://images.unsplash.com/photo-1785573265132-9efed1a29c14?w=800&auto=format&fit=crop&q=80') center/cover no-repeat;
             display: flex;
             align-items: flex-end;
             padding: 0 5% 40px;
@@ -375,7 +375,7 @@
             border: 1px solid var(--border-color);
         }
 
-        /* --- FOOTER --- */
+       
         footer {
             text-align: center;
             padding: 30px;
@@ -384,7 +384,7 @@
             font-size: 0.8rem;
         }
 
-        /* --- RESPONSIVE ADJUSTMENTS --- */
+        
         @media (max-width: 600px) {
             .hero-title { font-size: 2.1rem; }
             .hero-banner { height: 60vh; }
@@ -392,12 +392,12 @@
             .modal-banner { height: 160px; }
         }
 
-        /* --- FLOATING CRITIC & SUGGESTION BUTTON --- */
+       
 .cs-float-btn {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); /* Warna gradasi ala Instagram */
+    background: #e50914; /* Warna merah Netflix/Gmail */
     color: white;
     padding: 12px 20px;
     border-radius: 50px;
@@ -422,7 +422,7 @@
     font-size: 1.3rem;
 }
 
-/* Responsif untuk layar HP */
+
 @media (max-width: 600px) {
     .cs-float-btn span {
         display: none; /* Sembunyikan teks di HP, hanya tampilkan ikon */
@@ -438,7 +438,7 @@
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
+    
     <nav>
         <div class="brand-logo">
             <i class="fa-solid fa-play"></i> PORTOFLIX
@@ -446,7 +446,7 @@
         <span class="nav-tag">Kel 3 Edition</span>
     </nav>
 
-    <!-- Main Hero Banner -->
+   
     <section class="hero-banner">
         <div class="hero-content">
             <span class="series-badge">A PORTOFLIX ORIGINAL</span>
@@ -466,18 +466,18 @@
         </div>
     </section>
 
-    <!-- Cast / Member Section Grid -->
+
     <main class="main-container" id="castSection">
         <div class="row-header">
             <i class="fa-solid fa-users" style="color: var(--accent-red);"></i> Anggota Kelompok
         </div>
         
         <div class="cast-grid" id="castGrid">
-            <!-- Poster anggota dirender via JavaScript -->
+            
         </div>
     </main>
 
-    <!-- Modal Preview Detail Anggota -->
+    
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-box">
             <button class="modal-close-btn" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
@@ -493,13 +493,16 @@
                     <div class="modal-stats">
                         <span class="match-score">100% Match</span>
                         <span class="rating-box">ANGGOTA KELOMPOK</span>
-                        <span>PortoFlix Profile</span>
+                        <a id="modalInstagram" href="#" target="_blank" style="color: #ffffff; text-decoration: none; font-size: 1.1rem; display: flex; align-items: center; gap: 4px;">
+                            <i class="fa-brands fa-instagram" style="color: #e50914;"></i>
+                        </a>
+                        <span>Contact</span>
                     </div>
                 </div>
 
                 <p class="modal-bio" id="modalBio">Deskripsi singkat kontribusi...</p>
 
-                <!-- Ubah judul dari Keahlian & Spesialisasi menjadi Hobby -->
+            
                 <div class="skills-heading">Hobby</div>
                 <div class="skills-container" id="modalSkills"></div>
             </div>
@@ -511,70 +514,75 @@
         <p>&copy; 2026 PortoFlix - Kelompok 3. All rights reserved.</p>
     </footer>
 
-    <!-- Tombol Floating Kritik & Saran (Instagram) -->
-<!-- Ganti USERNAME_INSTAGRAM dengan username IG kamu/kelompok -->
-<a href="https://instagram.com/PAN._.NS" target="_blank" class="cs-float-btn">
-    <i class="fa-brands fa-instagram"></i>
+    
+<a href="mailto:Kenggtesaja@gmail.com?subject=Kritik%20dan%20Saran%20PortoFlix" class="cs-float-btn">
+    <i class="fa-solid fa-envelope"></i>
     <span>Kritik & Saran</span>
 </a>
 
-    <!-- JavaScript Logic -->
+  
     <script>
-        // DATA SEMUA ANGGOTA KELOMPOK (BIO & Hobby)
-        const teamMembers = [
+       
+       const teamMembers = [
             {
                 id: 1,
                 name: "Alwan Bani Anjabi",
                 role: "Siswa TKJ",
                 photo: "https://media.tenor.com/t4WEtH0z8B4AAAAe/ishowspeed-tweaking-out.png",
                 bgBanner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzGfHn6aNkOEpld_4VMwlCePLkOzTTHdUiAXOa4zqeaQ&s=10",
-                bio: "Memiliki kebiasaan mencari solusi yang praktis dan efisien untuk menyelesaikan pekerjaan dengan lebih cepat dan efektif.",
-                skills: ["Bermain Game", "Coding"]
+                bio: "Memiliki kebiasaan mencari solusi yang practical dan efisien untuk menyelesaikan pekerjaan dengan lebih cepat dan efektif.",
+                skills: ["Bermain Game", "Coding"],
+                instagram: "https://instagram.com/"
             },
             {
                 id: 2,
                 name: "Chaliza Aulia",
                 role: "Siswi TKJ",
-                photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Chaliza",
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiZpBGhBFqs8_gcvIqWliW-tCsaz3x8cplwIX8jANrA&s=10",
                 bgBanner: "https://images.unsplash.com/photo-1542744094-3a31b272c490?w=800",
                 bio: "Suka dunia desain dan pervisualan. Paling senang kalau diajak diskusi atau numpahin ide-ide kreatif buat tugas kelompok.",
-                skills: ["Menggambar", "Desain Grafis"]
+                skills: ["Menggambar", "Desain Grafis"],
+                instagram: "https://instagram.com/"
             },
             {
                 id: 3,
                 name: "Fariz Zefanya.M",
                 role: "Siswa TKJ",
-                photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Fariz",
-                bgBanner: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800",
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZd_gTZFas_xHQtNAx8jwm93RcTCaN8ceOm7fro4r77A&s",
+                bgBanner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7hnCOnIjE87-HqRsEyASvY7dHfRYXsirFKtTJLiWfTPYZ7i0qLweBI7I&s=10",
                 bio: "Anggota tim yang selalu bersemangat dalam mempelajari hal baru dan berkontribusi aktif dalam setiap kerja kelompok.",
-                skills: ["Bermain Game", "Mendengarkan Musik"]
+                skills: ["Bermain Game", "Mendengarkan Musik"],
+                instagram: "https://instagram.com/"
             },
             {
                 id: 4,
                 name: "M. Rizki Ripaldi",
                 role: "Siswa TKJ",
-                photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rizki",
-                bgBanner: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYXfoNrcTBz4lpHk574QaJuomaQclU3zEUxhBvvJudkg&s=10",
+                bgBanner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM1Yl6jsUY_tIYXabRkVbtIA2fflYoNOhFHROKwmRSLQ&s=10",
                 bio: "Hobi mikir keras dan mecahin masalah yang rumit. Selalu antusias dan santai tiap diajak kerja sama di dalam tim.",
-                skills: ["Bermain Catur", "E-sports"]
+                skills: ["Bermain Catur", "E-sports"],
+                instagram: "https://instagram.com/"
             },
             {
                 id: 5,
                 name: "M. Bayu Seto",
                 role: "Siswa TKJ",
-                photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bayu",
-                bgBanner: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800",
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr3797aNAwEtVxV5fL6-c6dFwp6ZCUDJ7oY82SoeHCvQ&s=10",
+                bgBanner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwKEWxwE2v-IDSSq7AoMVxQyhWbS0-HANu5407ERE9w&s=10",
                 bio: "Tipikal anak yang rapi dan terstruktur. Paling bisa diandelin buat urusan ngerapihin materi atau data-data kelompok.",
-                skills: ["Membaca Buku"]
+                skills: ["Membaca Buku"],
+                instagram: "https://instagram.com/"
             },
             {
                 id: 6,
                 name: "Nurlaila Tamara.a",
                 role: "Siswi TKJ",
-                photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nurlaia",
-                bgBanner: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800",
+                photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvq_XQ5b_NTQdSrE_yi2qKBDvoCjoF_suotpZSCqGQKA&s=10",
+                bgBanner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC8Afjj2HWXVwtFnaqzxBEQffSYmVYIRZPQm8tTwcimA&s=10",
                 bio: "Paling detail kalau lagi meriksa hasil kerjaan. Selalu mastiin semua tugas beres tepat waktu tanpa ada yang terlewat.",
-                skills: ["Mendengarkan Musik", "Badminton"]
+                skills: ["Mendengarkan Musik", "Badminton"],
+                instagram: "https://instagram.com/"
             },
             {
                 id: 7,
@@ -582,8 +590,9 @@
                 role: "Siswa TKJ",
                 photo: "https://i.pinimg.com/736x/08/ed/f7/08edf75294fd6eb21fc50f8e6b554f3b.jpg",
                 bgBanner: "https://i.pinimg.com/736x/90/c9/67/90c96761ef2e22853193fcd7409f30dc.jpg",
-                bio: "Suka nyari inspirasi visual yang unik. Selalu punya pandangan estetis buat bikin tampilan proyek makin keren.",
-                skills: ["Mendengarkan Musik", "Bermain Game"]
+                bio: "Penyedia ide visual dan pemikir estetis di Kelompok 3. Menghabiskan waktu luang dengan musik dan game untuk menjaga kreativitas tetap mengalir.",
+                skills: ["Mendengarkan Musik", "Bermain Game"],
+                instagram: "https://instagram.com/PAN._.NS"
             }
         ];
 
@@ -596,8 +605,9 @@
         const modalRole = document.getElementById('modalRole');
         const modalBio = document.getElementById('modalBio');
         const modalSkills = document.getElementById('modalSkills');
+        const modalInstagram = document.getElementById('modalInstagram');
 
-        // Render Poster Anggota
+  
         function renderCastGrid() {
             castGrid.innerHTML = teamMembers.map(member => `
                 <div class="poster-card" onclick="openModal(${member.id})">
@@ -612,13 +622,13 @@
             `).join('');
         }
 
-        // Scroll Halus ke Bagian Anggota
+   
         function scrollToCast() {
             document.getElementById('castSection').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Buka Pop-Up Detail Anggota
-        function openModal(id) {
+   
+function openModal(id) {
             const member = teamMembers.find(m => m.id === id);
             if (!member) return;
 
@@ -628,16 +638,23 @@
             modalBio.innerText = member.bio;
             modalSkills.innerHTML = member.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
 
+            
+            if (member.instagram) {
+                modalInstagram.href = member.instagram;
+                modalInstagram.style.display = 'inline-flex';
+            } else {
+                modalInstagram.style.display = 'none';
+            }
+
             modalOverlay.classList.add('active');
         }
-
-        // Tutup Modal
+   
         closeBtn.addEventListener('click', () => modalOverlay.classList.remove('active'));
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) modalOverlay.classList.remove('active');
         });
 
-        // Jalankan render awal
+   
         renderCastGrid();
     </script>
 </body>
