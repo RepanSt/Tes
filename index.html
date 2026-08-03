@@ -37,7 +37,7 @@
         
         nav {
             position: fixed;
-            top: 0;
+            top: 35px;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -433,12 +433,33 @@
         bottom: 20px;
         right: 20px;
     }
-}
+
+        .top-announcement {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--accent-red); /* Warna merah PortoFlix */
+            color: white;
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            z-index: 1000;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            }
     </style>
 </head>
 <body>
 
-    
+    <div class="top-announcement">
+        <i class="fa-solid fa-circle-info"></i> Website di update setiap malam, atau kalau Dev ga males
+    </div>
     <nav>
         <div class="brand-logo">
             <i class="fa-solid fa-play"></i> PORTOFLIX
